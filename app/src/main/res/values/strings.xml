@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Movie</string>
+    <string name="subtitle">Все премьеры в нашем приложении</string>
+    <string name="title">Фильмы</string>
+</resources>
