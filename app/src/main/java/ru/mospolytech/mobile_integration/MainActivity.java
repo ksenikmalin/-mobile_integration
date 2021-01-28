@@ -42,11 +42,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Spinner aSpinner = findViewById(R.id.spinner);
 
-        ArrayList<TimeWindow> time_list = new ArrayList<TimeWindow>();
+       ArrayList<TimeWindow> time_list = new ArrayList<TimeWindow>();
         time_list.add(new TimeWindow("day", "Трендовые фильмы за сегодня"));
         time_list.add(new TimeWindow("week", "Трендовые фильмы за неделю"));
 
-        ArrayAdapter<TimeWindow> myAdapter = new ArrayAdapter<TimeWindow>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, cities_list);
+        ArrayAdapter<TimeWindow> myAdapter = new ArrayAdapter<TimeWindow>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, time_list);
+
 
         aSpinner.setAdapter(myAdapter);
         aSpinner.setOnItemSelectedListener(this);
