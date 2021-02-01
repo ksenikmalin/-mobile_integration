@@ -1,3 +1,5 @@
+//здесь сериализую данные json из массива results в данные java
+
 package ru.mospolytech.mobile_integration;
 
 import com.google.gson.annotations.SerializedName;
