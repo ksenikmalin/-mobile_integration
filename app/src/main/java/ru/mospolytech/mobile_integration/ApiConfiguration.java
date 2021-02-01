@@ -1,4 +1,4 @@
-//Описание конфигурации Api
+//здесь инициализуеруется api, которому будем обращаться
 
 package ru.mospolytech.mobile_integration;
 
@@ -7,9 +7,8 @@ package ru.mospolytech.mobile_integration;
 import com.google.gson.Gson;
 
 import com.google.gson.GsonBuilder;
-
 import okhttp3.OkHttpClient;
-import retrofit2.Retrofit;
+import retrofit2.Retrofit; //Retrofit библиотека для сетевого взаимодействия
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -43,9 +42,9 @@ public class ApiConfiguration { //создаем класс ApiConfiguration
 
         api = retrofit.create(ru.mospolytech.mobile_integration.ApiInterface.class); // А потом превращение интерфейса API в вызываемый объект с помощью retrofit
     }
-    
-    public static ApiInterface getApi(){ //метод, в котором пытаемся получить api https://www.themoviedb.org/ 
-        if (api == null) { 
+
+    public static ApiInterface getApi(){ //метод, в котором пытаемся получить api https://www.themoviedb.org/
+        if (api == null) {
             new ApiConfiguration(); //создание нового подключения
         }
         return api;
